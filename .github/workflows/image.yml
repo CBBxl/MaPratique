@@ -70,7 +70,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/dholbach/my-practice:${{ steps.meta.outputs.tag }}
-            ghcr.io/dholbach/my-practice:latest
+            ghcr.io/cbbxl/mapratique:${{ steps.meta.outputs.tag }}
+            ghcr.io/cbbxl/mapratique:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max

@@ -17,7 +17,7 @@ Two paths depending on how you want to run the app:
 Download one file and run one command:
 
 ```bash
-curl -O https://raw.githubusercontent.com/dholbach/my-practice/main/prod.py
+curl -O https://raw.githubusercontent.com/CBBxl/MaPratique/main/prod.py
 chmod +x prod.py
 ./prod.py setup
 ```
@@ -33,7 +33,7 @@ chmod +x prod.py
 Open the address `setup` prints when it finishes (**http://localhost:8000** for "only on this machine").
 
 > **`.env` does much more than three keys** — email, Google Calendar, backup location, HTTPS, and more are all configured there. Review the full reference once you're up and running:
-> [`/.env.example`](https://github.com/dholbach/my-practice/blob/main/.env.example)
+> [`/.env.example`](https://github.com/CBBxl/MaPratique/blob/main/.env.example)
 
 ---
 
@@ -51,7 +51,7 @@ python3 -c "import secrets; print('DJANGO_SECRET_KEY=' + secrets.token_urlsafe(5
 python3 -c "import secrets; print('POSTGRES_PASSWORD=' + secrets.token_urlsafe(32))" >> .env
 
 # FERNET_KEY — generates inside the Docker image (no extra host deps needed)
-echo "FERNET_KEY=$(docker run --rm ghcr.io/dholbach/my-practice:latest \
+echo "FERNET_KEY=$(docker run --rm ghcr.io/cbbxl/mapratique:latest \
   python -c 'from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())')" >> .env
 ```
 
@@ -108,8 +108,8 @@ fully-populated demo practice you can click through and explore.
 ## 1 — Get the code
 
 ```bash
-git clone https://github.com/dholbach/my-practice.git
-cd my-practice
+git clone https://github.com/CBBxl/MaPratique.git
+cd MaPratique
 ```
 
 ---

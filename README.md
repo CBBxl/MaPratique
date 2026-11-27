@@ -5,7 +5,7 @@
   </picture>
 </h1>
 
-[![CI](https://github.com/dholbach/my-practice/actions/workflows/ci.yml/badge.svg)](https://github.com/dholbach/my-practice/actions/workflows/ci.yml)
+[![CI](https://github.com/CBBxl/MaPratique/actions/workflows/ci.yml/badge.svg)](https://github.com/CBBxl/MaPratique/actions/workflows/ci.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Django 6](https://img.shields.io/badge/Django-6.1-092E20?logo=django&logoColor=white)](https://www.djangoproject.com/)
 [![Python 3.15](https://img.shields.io/badge/Python-3.15-3776AB?logo=python&logoColor=white)](https://www.python.org/)
@@ -152,7 +152,7 @@ Views stay thin by delegating to builder classes (`AnalyticsDashboardBuilder`, `
 **Requirements**: Docker with the Compose plugin, Python 3.
 
 ```bash
-curl -O https://raw.githubusercontent.com/dholbach/my-practice/main/prod.py
+curl -O https://raw.githubusercontent.com/CBBxl/MaPratique/main/prod.py
 chmod +x prod.py
 ./prod.py setup
 ```
@@ -164,8 +164,8 @@ chmod +x prod.py
 **Requirements**: Docker with the Compose plugin, Git, Python 3 (for `dev.py`).
 
 ```bash
-git clone https://github.com/dholbach/my-practice.git
-cd my-practice
+git clone https://github.com/CBBxl/MaPratique.git
+cd MaPratique
 ./dev.py start --build      # builds image, starts PostgreSQL + Django
 ```
 
