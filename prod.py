@@ -23,11 +23,11 @@ VERSION = "v0.16.0"  # updated each release — keeps prod.py and docker-compose
 
 COMPOSE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "docker-compose.prod.yml")
 COMPOSE = ["docker", "compose", "-f", COMPOSE_FILE]
-IMAGE = f"ghcr.io/dholbach/my-practice:{VERSION}"
+IMAGE = f"ghcr.io/cbbxl/mapratique:{VERSION}"
 ENV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
-ENV_DOCS = f"https://github.com/dholbach/my-practice/blob/{VERSION}/.env.example"
-RELEASES_API = "https://api.github.com/repos/dholbach/my-practice/releases/latest"
-RAW_BASE = f"https://raw.githubusercontent.com/dholbach/my-practice/{VERSION}"
+ENV_DOCS = f"https://github.com/CBBxl/MaPratique/blob/{VERSION}/.env.example"
+RELEASES_API = "https://api.github.com/repos/CBBxl/MaPratique/releases/latest"
+RAW_BASE = f"https://raw.githubusercontent.com/CBBxl/MaPratique/{VERSION}"
 
 # Without these the stack starts but cannot work: Postgres refuses to initialise
 # with a blank password, and Django cannot sign sessions or read encrypted
@@ -281,7 +281,7 @@ def _ensure_compose_file():
         abort(
             f"Could not download docker-compose.prod.yml: {e}\n"
             "  Download it manually:\n"
-            "    curl -O https://raw.githubusercontent.com/dholbach/my-practice/main/docker-compose.prod.yml\n"
+            "    curl -O https://raw.githubusercontent.com/CBBxl/MaPratique/main/docker-compose.prod.yml\n"
             "  then re-run ./prod.py setup"
         )
 
@@ -342,7 +342,7 @@ def cmd_setup(args):
         abort(
             "Could not pull the image from GHCR.\n"
             "  Check your internet connection and try again.\n"
-            "  If the problem persists: https://github.com/dholbach/my-practice/issues"
+            "  If the problem persists: https://github.com/CBBxl/MaPratique/issues"
         )
 
     # 3. Generate secrets (only for keys not already set)
